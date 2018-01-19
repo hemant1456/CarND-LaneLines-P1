@@ -23,25 +23,19 @@ The goals / steps of this project are the following:
 
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+I followed the approach mentioned in the tutorial videos, I did parameter tuning using experimentation and intution.
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
+for extrapolation i separated my x,y values based on two factors-
+1) slope 2) x value should be less than middle of maximum x value
+Then i got y values for those x after fitting a line on x,y and drew lines on image
 
 
 ### 2. Identify potential shortcomings with your current pipeline
 
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+It will not work on circular paths
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+Use neural network for automatic feature detection of road so that it works on circular paths also.
